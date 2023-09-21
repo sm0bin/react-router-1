@@ -1,10 +1,10 @@
-import React from "react";
+import Headline from "./Headline";
 
 const About = () => {
   return (
     <section className=" max-w-screen-2xl mx-6 md:mx-10 2xl:mx-auto text-center">
       <div className="text-lg leading-relaxed space-y-6 text-justify max-w-5xl 2xl:mx-auto">
-        <h2 className="text-4xl font-semibold mb-6 text-center">Our Story</h2>
+        <Headline headline={"Our Story"}></Headline>
         <p>
           Welcome to our world of innovation and creativity. At{" "}
           <span className="font-bold">TechHub</span>, we are passionate about

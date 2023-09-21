@@ -6,12 +6,17 @@ import Home from "./components/Home";
 import ServicePlans from "./components/ServicePlans";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Hero from "./components/Hero";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
     children: [
+      {
+        path: "/",
+        element: <Hero></Hero>,
+      },
       {
         path: "/about",
         element: <About></About>,
