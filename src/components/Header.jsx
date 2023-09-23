@@ -11,6 +11,7 @@ const Header = () => {
     { text: "Services", url: "/services" },
     { text: "About Us", url: "/about" },
     { text: "Contact Us", url: "/contact" },
+    { text: "ToDo", url: "/todo" },
   ];
 
   return (

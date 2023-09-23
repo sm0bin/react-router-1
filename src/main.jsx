@@ -7,6 +7,7 @@ import ServicePlans from "./components/ServicePlans";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Hero from "./components/Hero";
+import ToDo from "./components/ToDo";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
       {
         path: "/services",
         element: <ServicePlans></ServicePlans>,
+      },
+      {
+        path: "/todo",
+        loader: () => fetch("https://jsonplaceholder.typicode.com/todos"),
+        element: <ToDo></ToDo>,
       },
     ],
   },
