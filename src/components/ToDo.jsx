@@ -1,4 +1,3 @@
-import React from "react";
 import { useLoaderData } from "react-router-dom";
 import { HiCheckCircle, HiMinusCircle } from "react-icons/hi2";
 import Headline from "./Headline";

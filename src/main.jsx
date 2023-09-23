@@ -8,6 +8,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Hero from "./components/Hero";
 import ToDo from "./components/ToDo";
+import Products from "./components/Products";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Hero></Hero>,
+      },
+      {
+        path: "/products",
+        loader: () => fetch("https://dummyjson.com/products"),
+        element: <Products></Products>,
       },
       {
         path: "/about",
