@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
+import "./Header.css";
 
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -17,9 +18,9 @@ const Header = () => {
   return (
     <header className=" bg-slate-600">
       <nav className="flex justify-between items-center max-w-screen-2xl mx-6 md:mx-10 2xl:mx-auto py-4 mb-8">
-        <a href="/" className="font-bold text-3xl">
+        <Link to="/" className="font-bold text-3xl">
           TechHub
-        </a>
+        </Link>
         <ul
           className={`duration-700 gap-12 items-center text-lg lg:flex lg:static absolute right-6 md:right-10 text-right p-6 rounded-xl max-lg:space-y-4 min-[0px]:max-lg:bg-slate-300 min-[0px]:max-lg:dark:bg-slate-600 ${
             navOpen ? "top-20" : "-top-64"
@@ -27,7 +28,7 @@ const Header = () => {
         >
           {navLinks.map((link, id) => (
             <li key={id}>
-              <Link to={link.url}>{link.text}</Link>
+              <NavLink to={link.url}>{link.text}</NavLink>
             </li>
           ))}
         </ul>

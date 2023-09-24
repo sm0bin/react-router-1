@@ -5,7 +5,7 @@ import Product from "./Product";
 const Products = () => {
   const productsArray = useLoaderData();
   const products = productsArray.products;
-  console.log(products);
+  // console.log(products);
 
   return (
     <>

@@ -9,11 +9,15 @@ import Contact from "./components/Contact";
 import Hero from "./components/Hero";
 import ToDo from "./components/ToDo";
 import Products from "./components/Products";
+import ProductDetails from "./components/ProductDetails";
+import { element } from "prop-types";
+import ErrorPage from "./components/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -23,6 +27,13 @@ const router = createBrowserRouter([
         path: "/products",
         loader: () => fetch("https://dummyjson.com/products"),
         element: <Products></Products>,
+      },
+      {
+        path: "/product/:productId",
+        // loader: ({ params }) => console.log(params.productId),
+        loader: ({ params }) =>
+          fetch(`https://dummyjson.com/products/${params.productId}`),
+        element: <ProductDetails></ProductDetails>,
       },
       {
         path: "/about",
